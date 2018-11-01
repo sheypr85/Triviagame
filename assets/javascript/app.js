@@ -84,6 +84,7 @@ answer: 2,
 
 
 $("#reset").hide();
+
 //click start button to start game
 $("#start").on("click", function () {
 		$("#start").hide();
@@ -93,6 +94,7 @@ $("#start").on("click", function () {
 	holder.push(selections[i]);
 }
 	})
+
 //timer start
 function runTimer(){
 	if (!running) {
@@ -121,16 +123,18 @@ function stop() {
 	running = false;
 	clearInterval(intervalId);
 }
+
 //randomly pick question in array if not already shown
 //display question and loop though and display possible answers
+
 function displayQuestion() {
-	//generate random index in array
+	//generate random index in selection array
 	index = Math.floor(Math.random()*selections.length);
 	pick = selections[index];
 
 
-		//iterate through answer array and display
-		$("#questionhere").html("<h2>" + pick.question + "</h2>");
+	//iterate through answer array and display
+	$("#questionhere").html("<h2>" + pick.question + "</h2>");
 		for(var i = 0; i < pick.choice.length; i++) {
 			var userChoice = $("<div>");
 			userChoice.addClass("answerchoice");
@@ -138,7 +142,6 @@ function displayQuestion() {
 			//assign array position to it so can check answer
 			userChoice.attr("data-guessvalue", i);
 			$("#answerhere").append(userChoice);
-
 }
 
 

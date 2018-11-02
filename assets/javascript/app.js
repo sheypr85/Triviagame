@@ -34,19 +34,19 @@ image: "assets/images/bbt.gif"
 question:"What is the name of the TV show that had a character named Sansa Stark?",
 choice:["Shameless", "Lord of the Rings", "Westworld", "Game of Thrones"],
 answer: 3,
-// image: ""
+image: "assets/images/sansa.gif"
 
 }, {
 question:"In what TV show there is a character named Stewie?",
 choice:["Family Guy", "American Dad", "Rick and Morty", "Robot Chicken"],
 answer: 0,
-// image: ""
+image: "assets/images/stewie.gif"
 
 }, {
 question:"In Friends what is the last name of the two Friends that are siblings?",
 choice:["Gallagher", "Geller", "Green", "Goller"],
 answer: 1,
-// image: ""
+image: "assets/images/monica&ross.gif"
 
 }, {
 question:"Who is the Family Guy?",
@@ -58,25 +58,25 @@ image: "assets/images/peterg.gif"
 question:"Who is the Marvel Superhero named Matt Murdock?",
 choice:["Flash", "Batman", "Hulk", "Daredevil"],
 answer: 3,
-// image: ""
+image: "assets/images/daredevil.gif"
 
 }, {
 question:"In Breaking Bad, What is the name of the Scientist?",
 choice:["Walter Black", "Jesse Whiteman", "Walter White", "Walt Whitman"],
 answer: 2,
-// image: ""
+image: "assets/images/walterwhite.gif"
 
 }, {
 question:"What is the show that has Winona Rider as one of the main characters?",
 choice:["American Horror Story", "Stranger Things", "Westworld", "Daredevil"],
 answer: 1,
-// image: ""
+image: "assets/images/winona.gif"
 
 }, {
 question:"What is the show that is based on Druglords?",
 choice:["Friends", "Shooter", "Narcos", "Shameless"],
 answer: 2,
-// image: ""
+image: "assets/images/pabloe.gif"
 
 }
 

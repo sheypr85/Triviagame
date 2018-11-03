@@ -1,24 +1,15 @@
 $(document).ready(function () {
 
 
-// create an on click function with a button to start game 
-//create timer for game 
-//select questions and right answers
-//after timer stop //stop quiz 
-//only one answer to click wait for the user to finish quiz // stop quiz 
-//reset quiz button
-//display correct answers
-//display incorrect answers
-//display unanswered questions 
 
 var correctCount = 0;
 var wrongCount = 0;
 var unanswerCount = 0;
-var timer = 20;
+var timer = 15;
 var intervalId;
 var userGuess = "";
 var running = false;
-var qCount = 9;
+var qCount = 10;
 var pick;
 var index;
 var newArray = [];
@@ -31,7 +22,7 @@ answer: 2,
 image: "assets/images/bbt.gif"
 
 }, {
-question:"What is the name of the TV show that had a character named Sansa Stark?",
+question:"What is the name of the TV show that has a character named Sansa Stark?",
 choice:["Shameless", "Lord of the Rings", "Westworld", "Game of Thrones"],
 answer: 3,
 image: "assets/images/sansa.gif"
@@ -78,6 +69,11 @@ choice:["Friends", "Shooter", "Narcos", "Shameless"],
 answer: 2,
 image: "assets/images/pabloe.gif"
 
+}, {
+question:"What show is based on Russian agents posing as an American Family?",
+choice:["The Americans", "House of Cards", "Homeland", "Ozark"],
+answer: 0,
+image: "assets/images/americans.gif"
 }
 
 ];
@@ -88,6 +84,7 @@ $("#reset").hide();
 //click start button to start game
 $("#start").on("click", function () {
 		$("#start").hide();
+		$("#title").hide();
 		displayQuestion();
 		runTimer();
 		for(var i = 0; i < selections.length; i++) {
@@ -148,7 +145,7 @@ function displayQuestion() {
 
 //click function to select answer and outcomes
 $(".answerchoice").on("click", function () {
-	//grab array position from userGuess
+
 	userGuess = parseInt($(this).attr("data-guessvalue"));
 
 	//correct guess or wrong guess outcomes
@@ -177,7 +174,7 @@ function hidepicture () {
 
 	setTimeout(function() {
 		$("#answerhere").empty();
-		timer= 20;
+		timer= 15;
 
 	//run the score screen if all questions answered
 	if ((wrongCount + correctCount + unanswerCount) === qCount) {
